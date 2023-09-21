@@ -16,7 +16,8 @@ class Question {
     std::string BuildQuestionString();
 
     public:
-    Question(std::string new_question, std::vector<std::string> new_choices, int new_answer);
+    Question(std::string new_question, std::vector<std::string> new_choices, int new_answer = 0);
     void Ask();
+    std::string get_question_string();
 
 };
