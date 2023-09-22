@@ -1,6 +1,5 @@
-#include <iostream>
-
 #include "question.hpp"
+#include "misc.hpp"
 
 int main() {
 
@@ -33,8 +32,6 @@ int main() {
     int ravenclaw = 0;
     int slytherin = 0;
 
-    
-    
     question1.Ask();
     question2.Ask();
     question3.Ask();
@@ -65,6 +62,7 @@ int main() {
     case 2:
         hufflepuff++;
         slytherin++;
+        break;
     default:
         std::cout << "Invalid input";
         break;
@@ -106,6 +104,15 @@ int main() {
     }
 
 
+    std::vector<std::pair<std::string, int>> scores = {{"gryffindor", gryffindor},
+        {"slytherin", slytherin},
+        {"ravenclaw", ravenclaw},
+        {"hufflepuff", hufflepuff}};
+
+    std::cout << "You belong to the house: " << VectorOfPairsMaxValue(scores).first << std::endl;
+
+
+    
 
     return 0;
 
